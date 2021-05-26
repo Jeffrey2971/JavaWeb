@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe 标签</title>
+</head>
+<body>
+
+<!--
+    简介：iframe 标签的作用是可以在当前的页面加载一个新的单独的窗口
+    iframe 和 a 标签的使用步骤
+        1、在 iframe 标签中使用 name 属性定义一个名称
+        2、使用 a 标签的 target 属性指定 iframe 定义好的名称
+-->
+
+<p>这是一个单独的页面</p><br><br>
+<iframe src="../img/11.jpg" frameborder="0" width="450" height="500" name="loadImg"></iframe>
+<br>
+<br>
+<ul>
+  <li><a href="图片标签.html" target="loadImg">图片标签</a></li>
+  <li><a href="表格标签.html" target="loadImg">表格标签</a></li>
+</ul>
+
+</body>
+</html>
