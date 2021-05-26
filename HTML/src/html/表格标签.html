@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+
+<!--
+    简介：<table> 标签是表格标签，用于在 HTML 页面上展示表格
+    常用的属性
+        th 表头标签，其中的字体会加粗
+        tr 行标签
+        td 嵌套与 tr 标签内，表示一行中的一个单元格
+        border 设置表格边框
+        align 设置表格相对于页面的对其方式
+        width 设置表格宽度
+        height 设置表格高度
+        cellspacing 设置表格间距
+        colspan 跨行
+        rowspan 跨列
+-->
+
+<table border="1" width="300" height="300" align="center" cellspacing="0">
+  <tr>
+    <th>星期一</th>
+    <th>星期二</th>
+    <th>星期三</th>
+    <th>星期四</th>
+    <th>星期五</th>
+  </tr>
+
+  <tr>
+    <td rowspan="2" align="center">语文</td>
+    <td>数学</td>
+    <td>英语</td>
+    <td colspan="2" align="center">地理</td>
+  </tr>
+  <tr>
+    <td>数学</td>
+    <td>英语</td>
+    <td>地理</td>
+    <td>生物</td>
+  </tr>  <tr>
+  <td>语文</td>
+  <td>数学</td>
+  <td>英语</td>
+  <td>地理</td>
+  <td>生物</td>
+</tr>  <tr>
+  <td>语文</td>
+  <td colspan="2" rowspan="2" align="center">数学</td>
+  <td>英语</td>
+  <td>地理</td>
+</tr>  <tr>
+  <td>语文</td>
+  <td>数学</td>
+  <td>生物</td>
+</tr>
+</table>
+
+</body>
+</html>
