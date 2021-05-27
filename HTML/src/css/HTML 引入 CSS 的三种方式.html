@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+
+        给标签添加样式的方式二：在 HTML 页面中的 <head> 标签内添加 <style type="text/css"> 标签
+
+    -->
+    <style type="text/css">
+        /*CSS 注释和 HTML 页面注释不同*/
+        div, span {
+            border: 1px solid red;
+            width: 100px;
+            height: 150px;
+            background: yellow;
+        }
+    </style>
+
+    <!--
+        给标签添加样式的方式三：在 HTML 页面外定义 css 文件，并使用 link 将其引入 HTML 页面中
+    -->
+    <link rel="stylesheet" href="./cssfile/style.css">
+    <meta charset="UTF-8">
+    <title>html-css</title>
+</head>
+<body>
+
+<!--
+    给标签添加样式的方式一：直接在标签后添加 style 属性
+-->
+
+<div style="border: 1px solid red; width: 100px; height: 100px; background: green">div 标签1</div>
+<div>div 标签2</div>
+
+<span>span 标签1</span>
+<span>span 标签2</span>
+
+<p>p 标签1</p>
+<p>p 标签2</p>
+
+</body>
+</html>
