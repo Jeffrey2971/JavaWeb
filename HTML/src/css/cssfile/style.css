@@ -1,0 +1,10 @@
+/*
+    给标签添加样式的方式三：新建一个 css 样式文件，并在这个文件内定义好样式，在 HTML 中引入这个样式文件即可
+*/
+
+p {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    background: red;
+}
