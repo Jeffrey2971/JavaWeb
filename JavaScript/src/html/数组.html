@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+    <script type="text/javascript">
+
+        var listOne = [];
+        listOne = [10, "10", Array("aa", 10, [1, "2", true])];
+
+        alert(listOne);
+        alert(listOne.length);
+        alert(listOne[listOne.length] = "javascript");
+        alert(listOne);
+        alert(listOne.length);
+
+        /*
+            在 JavaScript 的数组中，通过数组的角标进行赋值，如赋值的索引处之前没有赋过值，那么该数组会自动扩容至最大角标长度
+        */
+
+        var listTwo = [];
+        listTwo[0] = "aaa";
+        listTwo[2] = "ccc";
+        alert(listTwo[1]); // undefined
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
