@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 变量</title>
+    <!--
+        JavaScript 中定义变量的格式为 var 变量名 = 值;
+
+        JavaScript 中的变量类型分为以下几种：
+            数值型number
+            字符串类型 string
+            布尔类型 boolean
+            函数类型 function
+            对象类型 object
+            非数字类型 NAN
+            空值 null
+            未定义值 undefined
+            数组 Array
+
+    -->
+    <script type="text/javascript">
+        var i; // 定义一个变量 i
+        alert(i); // 此时 i 没有赋值所以显示的是 undefined
+        i = 12; // 将数字 12 赋予变量 i
+        alert(i); // 此时的 i 是数字 12
+        /*typeof 是 JavaScript 提供用于获取变量类型的函数*/
+        alert(typeof(i)); // 由于i 赋予了数字 12 ，所以 typeof 获取到的类型为 number
+        i = "hello javascript"; // 重新将变量 i 赋予字符串
+        alert(typeof(i)); // 此时 typeof 获取到的数据类型为 string
+    </script>
+</head>
+<body>
+
+</body>
+</html>
