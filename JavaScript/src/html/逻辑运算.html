@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算</title>
+    <script type="text/javascript">
+        /*
+            && 短路与
+            || 短路或
+            ! 非
+
+            在 js 语言中，所有的变量都可以参与布尔运算。数字 0、null、undefined、""(空串) 都为 false
+
+            js 中 && 与运算的两种情况
+                1、当表达式都为 true 的情况下，返回最后一个表达式的值
+                2、当表达式中有一个为 false 的情况下，返回第一个为 false 表达式的值
+
+            js 中 || 或运算的两种情况
+                1、当表达式都为 false 的情况下，返回最后一个表达式的值
+                2、当表达式中有一个为 true 的情况下，返回第一个为 true 的表达式的值
+        */
+
+        var i = "";
+        if (i) {
+            alert(true);
+        } else {
+            alert(false);
+        }
+
+        let a = "abc";
+        let b = true;
+        let c = false;
+        let d = null;
+
+        /*&& 与运算*/
+        alert(b && a);
+        alert(a && b);
+        alert(c && b);
+        alert(a && d);
+        alert(b && d);
+        alert(c && d);
+
+        /*|| 或运算*/
+        alert(a || b);
+        alert(c || b);
+        alert(c || d);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
