@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的定义方式一</title>
+    <script type="text/javascript">
+
+        /*定义一个无参函数*/
+        function fun1(){
+            alert("函数 fun1() 被调用了!");
+        }
+        fun1();
+
+        /*定义一个有参函数*/
+        function fun2(a, b){
+            alert("函数 fun2() 被调用了，携带的参数：" + a + b);
+        }
+        fun2("aaa", 123);
+
+        /*定义一个无参函数并带有返回值*/
+        function fun3(){
+            alert("函数 fun3() 被调用了");
+            return "aaa";
+        }
+
+        var receive = fun3();
+        alert(receive);
+
+        /*定义一个有参函数，传递两个参数计算后返回相加结果*/
+        function sum(n1, n2){
+            return n1 + n2;
+        }
+
+        var result = sum(10, 15);
+        alert(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
