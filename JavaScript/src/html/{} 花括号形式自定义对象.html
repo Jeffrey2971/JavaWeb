@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{} 花括号形式自定义对象</title>
+    <!--
+        使用花括号 {} 的形式创建对象实例，与 Object 形式不同，使用这种方式属性或函数需要定义在花括号体内，花括号新建对象的格式为
+            var 对象名 = {
+                属性名: 属性值,
+                函数名: function(){
+                    // 函数体
+                }
+            };
+
+    -->
+    <script type="text/javascript">
+        var obj = {
+          name: "jeffrey",
+          money: 100000000,
+          fun: function (){
+            alert(this.name);
+            alert(this.money);
+          }
+        };
+
+        alert(typeof(obj));
+        alert(obj.fun);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

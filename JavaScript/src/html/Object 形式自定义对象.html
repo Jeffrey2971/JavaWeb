@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object 自定义对象</title>
+    <!--
+        js 中可使用 Object 或 {} 自定义对象，Object 创建对象的格式为
+            var 对象名 = Object(); // 新建一个空对象
+            对象名.属性名 = 属性值; // 定义一个属性
+            对象名.函数名 = function(){}; // 定义一个函数
+
+    -->
+    <script type="text/javascript">
+        var obj = Object();
+        obj.name = "mable";
+        obj.age = 21;
+
+        obj.fun = function () {
+            alert("姓名：" + this.name);
+            alert("年龄：" + this.age);
+        }
+
+        alert(typeof (obj));
+        alert(obj.fun);
+        alert(obj.name);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
