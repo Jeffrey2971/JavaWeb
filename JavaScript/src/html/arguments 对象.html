@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的隐形参数</title>
+
+    <!--
+        在 js 中方法之间没有重载关系，但可使用 arguments 模拟重载，每个 Function 函数都有一个 Arguments 的实例，
+        它的作用就是获取一个函数内的所有局部变量，例如传递 10,20,30 这三个参数给 sum(); 函数，那么这个函数的 arguments[0]
+        就是 10 arguments[1] 就是 20
+
+        注意：arguments 并不是一个数组，它类数组且只有一个方法 length 用于获取对象长度，但它可转换为一个数组。arguments 不能
+        显式的创建
+    -->
+    <script type="text/javascript">
+        function fun(){
+            alert(arguments);
+            /*查看 arguments 数组的长度*/
+            alert(arguments.length);
+            /*遍历数组中的元素*/
+            for (let i = 0; i < arguments.length; i++){
+                alert(arguments[i])
+            }
+        }
+
+        /*计算出接收所有参数的总和*/
+        function sum(){
+            let result = 0;
+            for (let i = 0; i < arguments.length; i++){
+                 if (typeof(arguments[i]) != "number"){
+                    continue;
+                }
+                result = result + arguments[i];
+            }
+            return result;
+        }
+
+        // fun("aaa", 123, true);
+        alert(sum(10, "abc",30, 100));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
