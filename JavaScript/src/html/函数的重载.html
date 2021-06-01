@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的重载</title>
+
+    <!--
+        JavaScript 语言中函数不发生重载，同名的函数只会执行最后一个
+    -->
+    <script type="text/javascript">
+        function fun() {
+            alert("fun() 无参函数被调用了");
+        }
+
+        function fun(a, b){
+            alert("fun() 有参函数被调用了");
+        }
+
+        fun();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
