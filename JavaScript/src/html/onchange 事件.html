@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange 事件</title>
+    <script type="text/javascript">
+        /*静态注册 onchange 事件*/
+        function onchangeStatic() {
+            alert("静态注册 onchange 事件，地区发生了改变");
+        }
+
+        /*动态注册 onchange 事件*/
+        window.onload = function () {
+            let sel = document.getElementById("sel");
+            sel.onchange = function () {
+                alert("动态注册 onchange 事件，地区发生了改变");
+            };
+        };
+    </script>
+</head>
+<body>
+<label>
+    <!--静态注册 onchange-->
+    <select onchange="onchangeStatic()">
+        <option>---请选择地区---</option>
+        <option>东莞</option>
+        <option>龙岗</option>
+        <option>东城</option>
+        <option>西城</option>
+        <option>福田</option>
+    </select>
+    <br>
+    <select id="sel">
+        <option value="">---请选择人名---</option>
+        <option value="">张三</option>
+        <option value="">李四</option>
+        <option value="">王五</option>
+    </select>
+</label>
+</body>
+</html>
