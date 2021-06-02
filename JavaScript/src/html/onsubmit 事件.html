@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onsubmit 事件</title>
+    <script type="text/javascript">
+        /*静态注册 onsubmit 事件，如表单项中有一项不合法则拦截表单提交*/
+        function onsubmitStatic() {
+            alert("静态注册 onsubmit 事件，检查通过，表单提交");
+            return true;
+        }
+
+        /*动态注册 onsubmit 事件，如表单项中有一项不合法则拦截表单提交*/
+        window.onload = function () {
+            let sub = document.getElementById("sub");
+            sub.onsubmit = function () {
+                alert("动态注册 onsubmit 事件，检查不通过，拦截表单提交");
+                return false;
+            };
+        };
+    </script>
+</head>
+<body>
+<form action="http://localhost:8080" method="get" onsubmit="return onsubmitStatic()">
+    <label>
+        <input type="text" value="静态注册 onsubmit">
+        <input type="submit" value="提交表单">
+    </label>
+</form>
+
+
+<form action="http://localhost:8080" method="get" onsubmit="return" id="sub">
+    <label>
+        <input type="text" value="动态注册 onsubmit">
+        <input type="submit" value="提交表单">
+    </label>
+</form>
+
+</body>
+</html>
