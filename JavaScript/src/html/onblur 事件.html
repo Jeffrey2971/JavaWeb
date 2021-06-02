@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onblur 事件</title>
+    <style>
+        #t {
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 21px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        /*静态注册 onblur 失去焦点事件*/
+        function onblurStatic() {
+            console.log("静态注册失去焦点事件");
+        }
+
+        /*动态注册 onblur 失去焦点事件*/
+        window.onload = function () {
+            var btn2 = document.getElementById("btn2");
+            btn2.onblur = function () {
+                console.log("动态注册失去焦点事件");
+            }
+        }
+    </script>
+</head>
+<body>
+<table id="t">
+    <tr>
+        <td>用户名称：</td>
+        <td><label><input type="text" onblur="onblurStatic()"></label></td>
+    </tr>
+    <tr>
+        <td>用户密码：</td>
+        <td><label><input type="password" id="btn2"></label></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>
