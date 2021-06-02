@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onload 事件</title>
+    <!--
+        onload 是浏览器在解析完毕页面后触发的事件，无需被动触发
+    -->
+    <script type="text/javascript">
+        /*onload 事件静态注册*/
+        function onloadStatic() {
+            alert("静态注册 onload 事件");
+        }
+
+        /*onload 动态注册事件*/
+        window.onload = function () {
+            alert("动态注册 onload 事件");
+        }
+    </script>
+</head>
+<body onload="onloadStatic()">
+
+</body>
+</html>
