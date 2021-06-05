@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByName</title>
+    <script type="text/javascript">
+
+        // 根据标签的 name 属性获取标签对象，返回 name 属性标签对象的集合，集合中的每一项都是标签对象
+        // 获取到的集合元素的顺序是页面中从上到下元素
+        const hobbies = document.getElementsByName("hobby");
+
+        // 全选
+        function checkAll() {
+            for (let i = 0; i < hobbies.length; i++) {
+                // checked 为多选框中的选中状态，如果选中为 true 否则为 false
+                if (!hobbies[i].checked){
+                    hobbies[i].checked = true;
+                }
+            }
+        }
+
+        // 反选
+        function reverse() {
+            for (let i = 0; i < hobbies.length; i++) {
+                // 如果多选框中的选中状态为 true 则设定为 false，如果为 false 则设定为 true
+                hobbies[i].checked = !hobbies[i].checked;
+            }
+        }
+
+        // 全不选
+        function unselectAll() {
+            for (let i = 0; i < hobbies.length; i++){
+                // 如果多选框中选中框的状态为 true 则设定为 false
+                if (hobbies[i].checked){
+                    hobbies[i].checked = false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<label>
+    <input type="checkbox" name="hobby" value="python">python
+    <input type="checkbox" name="hobby" value="java">java
+    <input type="checkbox" name="hobby" value="c++">c++
+    <br/>
+    <button onclick="checkAll()">全选</button>
+    <button onclick="reverse()">反选</button>
+    <button onclick="unselectAll()">全不选</button>
+</label>
+</body>
+</html>
