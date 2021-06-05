@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regexp 正则表达式</title>
+    <!--
+        JavaScript 中创建正则表达式的两种方式
+            ① const pattern = new RegExp(rule);
+            ② const pattern = /rule/;
+    -->
+    <script type="text/javascript">
+
+        // 规定字符串中必须包含字母 e
+        const pattern1 = new RegExp("e");
+        console.log(pattern1.test("apple"));
+        console.log(pattern1.test("Banana"));
+
+        // [abc]  规定字符串中必须包含 a 或 b 或 c 字母中的某一个
+        const pattern2 = /[abc]/;
+        console.log(pattern2.test("JavaScript"));
+        console.log(pattern2.test("123321"));
+
+        // [a-z] 规定字符串中必须包含小写字母
+        const pattern3 = /[a-z]/;
+        console.log(pattern3.test("123A321"));
+        console.log(pattern3.test("3213h21123"));
+
+        // [A-Z] 规定字符串中必须包含大写字母
+        const pattern4 = /[A-Z]/;
+        console.log(pattern4.test("abcdefg"));
+        console.log(pattern4.test("abCdefg"));
+
+        // \w 规定字符串中必须包含大小写字母、数字、下划线
+        const pattern5 = /\w/;
+        console.log(pattern5.test("abc__123"));
+        console.log(pattern5.test(";;;"));
+
+        // a+ 规定字符串中是否包含一个或一个以上的字母 a
+        const pattern6 = /a+/;
+        console.log(pattern6.test("python"));
+        console.log(pattern6.test("java"));
+
+        // a* 规定字符串中是否包含0个或多个 a
+        const pattern7 = /a*/;
+        console.log(pattern7.test("xcvjxc23471"));
+
+        // a? 规定字符串中是否包含1个或0个 a
+        const pattern8 = /a?/;
+        console.log(pattern8.test("xfnga123"));
+
+        // a{n} 规定字符串必须连续包含n个 a
+        const pattern9 = /a{3}/;
+
+        console.log(pattern9.test("bbccceeaa"));
+        console.log(pattern9.test("bbccceeaaaa"));
+
+        // a{x,y} 规定字符串必须包含至少x个 a，最多y个 a
+        const pattern10 = /a{3,5}/;
+        console.log(pattern10.test("aabbccaaa"));
+        console.log(pattern10.test("aabbcc"));
+
+        // a{n,} 规定字符串必须连续包含n个 a
+        const pattern11 = /a{5,}/;
+        console.log(pattern11.test("bbbbaaaaa"));
+        console.log(pattern11.test("vvccaaaabbb"));
+
+        // ^a 规定字符串必须以字母 a 开头
+        const pattern12 = /^a/;
+        console.log(pattern12.test("banana"));
+        console.log(pattern12.test("apple"));
+
+        // $a 规定字符串必须以字母 a 结尾
+        const pattern13 = /a$/;
+        alert(pattern13.test("banana"));
+        alert(pattern13.test("apple"));
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
