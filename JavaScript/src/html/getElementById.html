@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document 对象之 getElementById</title>
+    <!--
+        实现当用户点击了校验按钮，获取输入框中的内容并验证内容是否合法(规则：必须由数字、字母、下划线组成，且长度为 5-12位之间)
+
+        test() 方法用于测试某个字符串是否匹配当前规则，如果匹配返回 true 否则返回 false
+
+    -->
+    <script type="text/javascript">
+        function buttonFun() {
+            // 根据标签 ID 属性获取标签对象
+            const ele = document.getElementById("uname");
+            const usernameText = ele.value;
+            const pattern = /^\w{5,12}$/;
+            const unameSpan = document.getElementById("unameSpan");
+
+            if (pattern.test(usernameText)) {
+                unameSpan.innerHTML = "<img src=\"../img/right.png\" alt=\"加载失败\" width=\"18px\" height=\"18\">";
+            } else {
+                // 获取起始标签和结束标签之间的内容
+                unameSpan.innerHTML = "<img src=\"../img/wrong.png\" alt=\"加载失败\" width=\"18px\" height=\"18\">";
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<label>
+    用户名称：<input type="text" id="uname">
+    <span style="color: red" id="unameSpan"></span>
+    <br>
+    <button onclick="buttonFun()">校验</button>
+</label>
+</body>
+</html>
