@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByTagName</title>
+    <script type="text/javascript">
+
+        // 根据标签名获取标签对象，返回指定标签对象的集合，集合中的每一项都是 dom 对象，它们的顺序都是页面中从上到下进行排序
+        const ele = document.getElementsByTagName("input");
+
+        function selectALL(){
+            for (let i = 0; i < ele.length; i++) {
+                ele[i].checked = true;
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <label>
+        Choose the fruit you like
+        <br>
+        <input type="checkbox">banana
+        <input type="checkbox">apple
+        <input type="checkbox">orange
+        <input type="checkbox">lemon
+        <br>
+        <button onclick="selectALL()">selectALL</button>
+    </label>
+
+</body>
+</html>
