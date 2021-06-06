@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createElement</title>
+    <!--
+        使用 document 对象中的 createElement 方法在创建 HTML 标签并显示在页面上
+    -->
+    <script type="text/javascript">
+        /*需要在 HTML 页面初始化完成后再进行此操作，否则会出现 document.body 为空的情况*/
+        window.onload = function () {
+            /*此时创建出来的 div 标签对象在内存中*/
+            const divObj = document.createElement("div");
+            /*设置起始标签到结束标签中的内容*/
+            divObj.innerHTML = "飞飞最帅";
+            /*将创建好的节点对象添加到 body 中，无需再获取 body 元素，document 对象已经提供*/
+            document.body.appendChild(divObj);
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>
