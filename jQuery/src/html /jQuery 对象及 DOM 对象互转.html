@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 对象和 DOM 对象互转</title>
+    <!--
+        DOM 对象转换为 jQuery 对象
+            1、首先需要 DOM 对象
+            2、使用 jQuery 的核心函数 $(); 并传入 DOM 对象即可转换为 jQuery 对象
+        jQuery 对象转换为 DOM 对象
+            1、首选需要引入 jQuery 类库
+            2、使用 jQuery 对象的下标即可取出相应的 DOM 对象
+    -->
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        /* 将 DOM 对象转换为 jQuery 对象 */
+        window.onload = function () {
+            const DOM = document.getElementById("test");
+            alert(DOM); // [object HTMLDivElement]
+            alert($(DOM)); // [object Object]
+        };
+
+        /* 通过下标将 jQuery 对象转为 DOM 对象  */
+        $(function () {
+            const $test = $("#test");
+            alert($test); // [object Object]
+            alert($test[0]); // [object HTMLDivElement]
+        });
+    </script>
+</head>
+<body>
+    <div id="test">test div</div>
+    <button id="dom2dom"></button>
+    <button id="dom2jQuery"></button>
+    <button id="jQuery2jQuery"></button>
+    <button id="jQuery2dom"></button>
+</body>
+</html>
