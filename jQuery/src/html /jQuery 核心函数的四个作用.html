@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 核心函数的四个作用</title>
+    <!--
+        jQuery 核心函数的的四个作用分为：
+            jQuery 的核心函数就是 $ 符号
+            1、当参数为函数时，表示页面加载完成之后执行该函数，和 window.onload = function(){} 一样
+            2、当参数为 HTML 字符串时，表示创建这些 HTML 标签对象，可使用 appendTo(); 方法将这些创建好的对象添加进指定元素的尾部
+            3、当参数为选择器字符串时，表示根据提提供不同的选择器查找元素
+                $("#id"); id 选择器，根据标签的 id 属性值获取标签对象
+                $("[name='name 属性']"); 表示标签的 name 属性获取标签对象
+                $("tagName"); 标签名选择器，根据标签名获取标签对象
+                $(".class"); 类型选择器，根据标签的 class 属性值获取标签对象
+            4、当参数为 DOM 对象时，表示将 DOM 对象转换为 jQuery 对象
+    -->
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () { // 当核心函数的参数为函数时，表示页面加载完毕后执行该函数
+            $("<div>\n" +
+                "        <span>div-span1</span>\n" +
+                "        <span>div-span2</span>\n" +
+                "    </div>").appendTo("body");
+
+            const $btn01 = $("#btn01");
+            $btn01.click(function () {
+                alert("id 选择器获取标签对象");
+            });
+
+            const $btn02 = $("[name='btn02']");
+            $btn02.click(function () {
+                alert("name 属性选择器获取标签对象");
+            });
+
+
+            const $btn03 = $(".btn03");
+            $btn03.click(function () {
+                alert("类型选择器获取标签对象");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn01">按钮1</button>
+    <button name="btn02">按钮2</button>
+    <button class="btn03">按钮3</button>
+</body>
+</html>
