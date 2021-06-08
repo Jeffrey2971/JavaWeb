@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导入 jQuery 并绑定点击事件</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            const $btn = $("#btn");
+            $btn.click(function () {
+                alert("Hello,jquery");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn">我是一个按钮</button>
+</body>
+</html>
