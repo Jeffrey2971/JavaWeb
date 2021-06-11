@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 对象的本质</title>
+    <!--
+        jQuery 对象的本质：DOM 对象的数组 + jQuery 提供好的一系列函数和属性
+        jQuery 和 DOM 是两个对象，DOM 不能使用 jQuery 中的一些函数或属性，同样 jQuery 也不能使用 DOM 对象中的一些函数和属性
+    -->
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+
+        /*jQuery 对象中并没有 innerHTML 属性*/
+        $(function () {
+            $("#test").innerHTML = "这不是 jQuery 对象的属性";
+
+        });
+
+        window.onload = function () {
+            document.getElementById("test").innerHTML = "这是 DOM 对象的属性 innerHTML";
+        };
+
+        $(function () {
+            $("#test").click(function () {
+                alert("click() 是 jQuery 对象的方法");
+            });
+        });
+
+        window.onload = function () {
+            document.getElementById("test").click(function () {
+                alert("这不是 jQuery 对象中的方法");
+            });
+        };
+
+    </script>
+</head>
+<body>
+<div id="test">test div</div>
+<button id="dom2dom"></button>
+<button id="dom2jQuery"></button>
+<button id="jQuery2jQuery"></button>
+<button id="jQuery2dom"></button>
+</body>
+</html>
