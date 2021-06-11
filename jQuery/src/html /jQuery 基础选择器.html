@@ -29,7 +29,14 @@
     <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
     <!--
         jQuery 基本选择器
-            css(); 函数可以改变指定元素的样式
+            $("#id"); id 选择器，根据指定的 id 属性查找标签对象
+            $(".class"); 类选择器，根据指定的 class 属性查找标签对象
+            $("tagName"); 标签名选择器，根据指定的标签名查找标签对象
+            $("*"); 通配符选择器，查找所有的标签对象
+            $("selector1, selector2"); 组合选择器，根据提供的多种选择器匹配标签对象
+
+
+        css(); 函数可以改变指定元素的样式
     -->
     <script type="text/javascript">
         $(function () {
