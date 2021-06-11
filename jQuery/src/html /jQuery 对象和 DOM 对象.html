@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 对象和 DOM 对象</title>
+    <!--
+        jQuery 对象和 DOM 对象的区别
+            DOM 对象：DOM 对象 Alert 出来的结果为 [object HTML 标签名 Element]
+                通过 getElementById(); 获取到的标签对象是 DOM 对象
+                通过 getElementsByName(); 获取到的标签对象是 DOM 对象
+                通过 getElementsByTagName(); 获取到的标签对象是 DOM 对象
+                通过 createElement(); 方法创建的对象也是 DOM 对象
+            jQuery 对象：jQuery 对象 Alert 出来的结果为 [object object]
+                通过 jQuery 提供的 API 创建的对象是 jQuery 对象
+                通过 jQuery 提供的 API 查询的对象也是 jQuery 对象
+                通过 jQuery 封装的 DOM 对象是 jQuery 对象
+    -->
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        const ele = document.getElementById("btn1");
+        alert($(ele));
+        alert($("<div><span>span1</span><span>span2</span></div>"));
+        alert($("#btn2"));
+    </script>
+</head>
+<body>
+<button id="btn1">按钮1</button>
+<button id="btn2">按钮2</button>
+</body>
+</html>
