@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>appendTo() 和 prependTo() 方法</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 内部插入
+            $('<h1>标题1</h1>').appendTo('div');
+            $('<h2>标题2</h2>').prependTo($('div'));
+
+            // 外部插入
+            $('<h3>标题3</h3>').insertBefore('div');
+            $('<h3>标题4</h3>').insertAfter($('div'));
+
+            // 替换
+            $('div').replaceWith('<h4>标题5</h4>');
+            $('<p></p>').replaceAll('input')
+
+            // 删除
+            $('div').remove();
+            $('div').empty();
+        });
+    </script>
+</head>
+<body>
+<br>
+多选：
+<input type="checkbox" type="checkbox" value="checkbox1" name="checkbox" checked="checked"> checkbox1
+<input type="checkbox" type="checkbox" value="checkbox2" name="checkbox"> checkbox2
+<div>test1</div>
+<div>test2</div>
+</body>
+</html>
