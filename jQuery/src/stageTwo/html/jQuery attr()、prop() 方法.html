@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 的 attr() 和 prop() 方法</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // attr() 方法传入单个属性时表示返回该属性的值
+            alert($(":checkbox:first").attr('name'));
+
+            // attr() 方法传入两个参数时表示设置该参数的值为指定的值
+            $(":radio:last").attr('name', 'abc');
+
+            alert($(':checkbox:first').attr('checked')); // undefined
+            alert($(':checkbox:last').attr('checked')); // checked
+
+            // attr() 还可为未定义的属性进行操作
+            $(':checkbox:eq(1)').attr("abc", "abcValue");
+
+            // 使用 prop() 可以更直观的看出选项框的选中状态
+            alert($(':radio:first').prop('checked')); // false
+            alert($(':radio:last').prop('checked')); // true
+        });
+    </script>
+</head>
+<body>
+单选：
+<input type="radio" name="radio" value="radio1">radio1
+<input type="radio" name="radio" value="radio2" checked="checked">radio2
+<br>
+
+复选：
+<input type="checkbox" name="checkbox" value="check1">check1
+<input type="checkbox" name="checkbox" value="check2">check2
+<input type="checkbox" name="checkbox" value="check3" checked="checked">check3
+<br>
+
+</body>
+</html>
