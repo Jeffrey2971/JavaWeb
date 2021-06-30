@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 事件操作</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <!--
+        $(function(){}); 和 window.onload = function(){}; 的加载顺序
+            1、jQuery 在页面加载完成之前执行
+            2、原生 js 在页面加载完成之后执行
+        它们的触发时机
+            1、jQuery 的页面在浏览器内核解析完毕页面标签并创建好 DOM 对象之后就会立马执行
+            2、原生 js 的页面除了等待浏览器内核解析完毕页面后创建好 DOM 对象，还要等标签显式时加载的内容完成
+        它们执行的次数
+            1、jQuery 的页面加载完成之后会按照顺序执行所有注册好的 $(function(){})
+            2、js 的页面加载完成之后只会执行最后一个注册好的 function 函数
+
+    -->
+    <script type="text/javascript">
+
+        window.onload = function () {
+            alert('原生 js 页面加载完成之后 -- 1');
+        };
+        window.onload = function () {
+            alert('原生 js 页面加载完成之后 -- 2');
+        };
+        window.onload = function () {
+            alert('原生 js 页面加载完成之后 -- 3');
+        };
+        $(function () {
+            alert('jquery 页面加载完成之后 -- 1');
+        });
+        $(function () {
+            alert('jquery 页面加载完成之后 -- 2');
+        });
+        $(function () {
+            alert('jquery 页面加载完成之后 -- 3');
+        });
+    </script>
+</head>
+<body>
+    <button>我是按钮</button>
+    <iframe src="https://www.baidu.com" frameborder="0"></iframe>
+    <img src="img/1.jpg" alt="图片">
+
+</body>
+</html>
