@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+    以上内容是 XML 文件的声明内容，使用 <? content ?> 表示
+    version='1.0' 表示该 XML 的版本
+    encoding='utf-8' 表示该文件的编码
+-->
+
+<!--books 表示所有的书-->
+<books>
+    <!--book 表示其中的一本书，其中的 sn 表示图书的序列号，name 为书名，author 为该书的作者，price 为该书的价格-->
+    <book sn="SN00001">
+        <id>1</id>
+        <name>三国演义</name>
+        <author>罗贯中</author>
+        <price>75</price>
+    </book>
+
+
+    <book sn="SN00002">
+        <id>2</id>
+        <name>水浒传</name>
+        <author>施耐庵</author>
+        <price>70</price>
+    </book>
+
+    <!--<book sn="SN00003" id="3" name="西游记" author="吴承恩" price="80"/>-->
+    <book>
+        <id>3</id>
+        <name>红楼梦</name>
+        <author>曹雪芹</author>
+        <price>50</price>
+        <remark><![CDATA[<<<>>>]]></remark>
+    </book>
+</books>
